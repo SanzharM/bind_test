@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 
 class Utils {
@@ -7,13 +6,10 @@ class Utils {
 
     final now = DateTime.now();
     if (date.year == now.year && date.month == now.month && date.day == now.day) {
-      debugPrint('Today');
       return 'Today';
     } else if (date.year == now.year && date.month == now.month && date.day == now.day - 1) {
-      debugPrint('Yesterday');
       return 'Yesterday';
     } else if (date.year == now.year && date.month == now.month && date.day == now.day + 1) {
-      debugPrint('Tommorow');
       return 'Tommorow';
     }
     return DateFormat('EEEE, d MMM').format(date);
